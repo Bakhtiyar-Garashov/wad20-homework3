@@ -10,9 +10,8 @@
       <b-collapse id="nav-collapse" is-nav>
         <!-- Right aligned nav items -->
         <b-navbar-nav class="mx-auto">
-          <b-input-group >
-            <b-form-input  class="search-box" placeholder="Search...">
-
+          <b-input-group>
+            <b-form-input class="search-box" placeholder="Search...">
             </b-form-input>
             <b-input-group-append>
               <b-button variant="info">Search</b-button>
@@ -36,8 +35,13 @@
 </template>
 
 <script>
+
 export default {
   name: "Navbar",
+     
+  mounted(){
+   console.log(this.$store.getters.profile); // error: returns initial value of state which is ' ' 
+  }
 };
 </script>
 
@@ -46,6 +50,4 @@ export default {
 .logo {
   width: 40px;
 }
-
-
 </style>
