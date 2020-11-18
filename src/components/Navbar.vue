@@ -52,6 +52,12 @@ export default {
 </script>
 
 <style scoped>
+
+#navbar{
+  position: fixed;
+  width: 100%;
+}
+
 .logo {
   width: 40px;
 }

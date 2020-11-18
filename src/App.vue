@@ -1,6 +1,9 @@
 <template>
   <div id="app">
-    <Navbar />
+     <Navbar />
+   <div class="container">
+     
+   </div>
   </div>
 </template>
 
@@ -18,7 +21,12 @@ export default {
 <style>
 #app {
   background-color: #0277bd;
-  height: 100vh;
+  
   width: 100%;
 }
+.container{
+  height: 100vh;
+  background-color: #f8f9fa;
+}
+
 </style>
