@@ -23,10 +23,12 @@
           <b-nav-item-dropdown variant="dark" right>
             <!-- Using 'button-content' slot -->
             <template #button-content>
-              <img src="../assets/logo.png" width="30" alt="" srcset="" />
+              <img class="avatar" :src="profile.avatar" alt="" srcset="" />
             </template>
-            <b-dropdown-item href="#">Browse</b-dropdown-item>
-            <b-dropdown-item href="#">Sign Out</b-dropdown-item>
+            <b-dropdown-item>{{profile.firstname}} {{profile.lastname}}</b-dropdown-item>
+            <b-dropdown-item>{{profile.email}}</b-dropdown-item>
+            <b-dropdown-item><a href="#">Browse</a></b-dropdown-item>
+            <b-dropdown-item><a href="#">Sign out</a></b-dropdown-item>
           </b-nav-item-dropdown>
         </b-navbar-nav>
       </b-collapse>
@@ -35,13 +37,17 @@
 </template>
 
 <script>
-
 export default {
   name: "Navbar",
-     
-  mounted(){
-   console.log(this.$store.getters.profile); // error: returns initial value of state which is ' ' 
-  }
+
+  computed: {
+    profile() {
+      return this.$store.getters.profile;
+    },
+  },
+  mounted() {
+    this.$store.dispatch("fetchUserProfile");
+  },
 };
 </script>
 
@@ -49,5 +55,11 @@ export default {
 <style scoped>
 .logo {
   width: 40px;
+}
+.avatar{
+  
+  border-radius: 100%;
+  height: 50px;
+  width: 50px;
 }
 </style>
