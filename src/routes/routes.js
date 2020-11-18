@@ -3,7 +3,7 @@ import VueRouter from 'vue-router';
 import Browse from '../components/Browse'
 Vue.use(VueRouter)
 
-
+// add your routes here
 const routes = [
     { path: '/browse', component: Browse },
     // { path: '/bar', component: Bar }
