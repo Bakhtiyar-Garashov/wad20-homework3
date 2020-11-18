@@ -25,16 +25,13 @@ const store = new Vuex.Store({
       const response = await axios.get(
         'https://private-517bb-wad20postit.apiary-mock.com/users/1'
       );
-
       commit('setProfile', response.data);
-
     },
 
     async fetchAllProfiles({ commit }) {
       const response = await axios.get(
         'https://private-517bb-wad20postit.apiary-mock.com/profiles'
       );
-
       commit('setAllProfiles', response.data);
     },
 
@@ -42,7 +39,6 @@ const store = new Vuex.Store({
       const response = await axios.get(
         'https://private-517bb-wad20postit.apiary-mock.com/posts'
       );
-
       commit('setAllPosts', response.data);
     },
 
