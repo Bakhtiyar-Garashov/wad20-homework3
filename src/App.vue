@@ -1,9 +1,9 @@
 <template>
   <div id="app">
-     <Navbar />
-   <div class="container">
-     
-   </div>
+    <Navbar />
+    <div class="container">
+      <router-view></router-view>
+    </div>
   </div>
 </template>
 
@@ -21,12 +21,13 @@ export default {
 <style>
 #app {
   background-color: #0277bd;
-  
   width: 100%;
 }
-.container{
-  height: 100vh;
+.container {
+ 
+  max-width: 50% !important;
+  
   background-color: #f8f9fa;
+  padding-top: 100px;
 }
-
 </style>

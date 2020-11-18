@@ -25,9 +25,13 @@
             <template #button-content>
               <img class="avatar" :src="profile.avatar" alt="" srcset="" />
             </template>
-            <b-dropdown-item>{{profile.firstname}} {{profile.lastname}}</b-dropdown-item>
-            <b-dropdown-item>{{profile.email}}</b-dropdown-item>
-            <b-dropdown-item><a href="#">Browse</a></b-dropdown-item>
+            <b-dropdown-item
+              >{{ profile.firstname }} {{ profile.lastname }}</b-dropdown-item
+            >
+            <b-dropdown-item>{{ profile.email }}</b-dropdown-item>
+            <b-dropdown-item
+              ><router-link to="/browse">Browse</router-link></b-dropdown-item
+            >
             <b-dropdown-item><a href="#">Sign out</a></b-dropdown-item>
           </b-nav-item-dropdown>
         </b-navbar-nav>
@@ -52,17 +56,16 @@ export default {
 </script>
 
 <style scoped>
-
-#navbar{
+#navbar {
   position: fixed;
   width: 100%;
+  z-index: 999;
 }
 
 .logo {
   width: 40px;
 }
-.avatar{
-  
+.avatar {
   border-radius: 100%;
   height: 50px;
   width: 50px;

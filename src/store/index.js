@@ -14,7 +14,7 @@ const store = new Vuex.Store({
 
   getters: {
     profile: (state) => state.userProfile,
-    allProfiles: (state) => state.allProfiles,
+    allProfiles: (state) => console.log(state.allProfiles),
     posts: (state) => state.allPosts,
 
   },
@@ -32,6 +32,7 @@ const store = new Vuex.Store({
       const response = await axios.get(
         'https://private-517bb-wad20postit.apiary-mock.com/profiles'
       );
+      
       commit('setAllProfiles', response.data);
     },
 
@@ -44,9 +45,22 @@ const store = new Vuex.Store({
 
   },
   mutations: {
-    setProfile: (state, profile) => (state.userProfile = profile),
-    setAllProfiles: (state, profiles) => (state.allProfiles = profiles),
-    setAllPosts: (state, posts) => (state.allPosts = posts)
+    setProfile(state, profile)
+    {
+      state.userProfile = profile
+    },
+    setAllProfiles(state, profiles)
+    { 
+      let profs=profiles.map(prof=>{
+         prof.isFollowed=false
+         return prof
+      });
+      state.allProfiles = profs
+    },
+    setAllPosts(state, posts)
+    {
+      state.allPosts = posts
+    }
 
   },
 
