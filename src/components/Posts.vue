@@ -21,6 +21,7 @@
           class="button-normal"
           :class="{ liked: post.isLiked }"
         >
+        <span ><img style="margin-bottom:5px;" width="20" src="../assets/like.png" alt="" srcset=""></span>
           {{ post.likes }}
         </button>
       </div>
@@ -63,7 +64,7 @@ export default {
 }
 
 .button-normal {
-  background-image: url("../assets/like.png");
+ 
   border-radius: 10px;
   color: white;
   outline: none;
@@ -78,8 +79,7 @@ export default {
 }
 
 .liked {
-  background-image: url("../assets/like.png");
-  border-radius: 10px;
+  
   outline: none !important;
   border: none;
   padding: 5px 20px;
