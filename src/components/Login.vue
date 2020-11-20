@@ -1,9 +1,9 @@
 <template>
   <div class="parent">
     <div class="login-container"><img class="logo" src="../assets/logo.png" alt="logo" srcset=""
-    /></div>
+    />
       <div>
-        <h1>Welcome to postIt!</h1>
+        <h4>Welcome to postIt!</h4>
       </div>
       <div>
         <h4>
@@ -13,8 +13,8 @@
       <div>
         <h4>Or</h4>
       </div>
-      <div>
-        <h3>Please Log In</h3>
+      <div class="login-form">
+        <h3>Please log in</h3>
         <div>
           <input type="text" name="email" placeholder="Email">
         </div>
@@ -31,6 +31,7 @@
         </div>
 
       </div>
+    </div>
  </div>
 </template>
 
@@ -52,22 +53,35 @@ a {
   display: flex;
   justify-content: center;
   align-items: center;
+ 
+  padding-bottom: 125px;
 }
 
 .login-container {
-  background-size: 20% auto;
-  background-repeat: no-repeat;
-  background-position: 15px 15px;
+  
   min-width: 25%;
-  padding: 45px 45px;
+  width: 60%;
+  padding: 25px 45px 45px 10px;
   background-color: #ffffff;
   box-shadow: 0 0 15px rgba(38, 50, 56, 0.33);
   text-align: center;
 }
 
+.login-container img{
+  width: 80px;
+  float: left;
+}
+
+.login-container h4{
+  margin-top: 50px;
+}
+
 .login-container form div > input {
   padding: 8px 16px;
   margin: 4px 0;
+}
+.login-form input {
+  margin: 10px 0;
 }
 
 button {
@@ -83,6 +97,8 @@ button:hover {
   box-shadow: 0 0 5px rgba(38, 50, 56, 0.7);
   cursor: pointer;
 }
-
+.container{
+  background-color: #0277bd;
+}
 
 </style>

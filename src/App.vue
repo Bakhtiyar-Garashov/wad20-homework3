@@ -1,7 +1,7 @@
 <template>
   <div id="app">
     <router-view name="nav"></router-view>
-    <div class="container">
+    <div :class="{'container-login':isPathLogin}" class="container">
       <router-view></router-view>
     </div>
   </div>
@@ -12,9 +12,21 @@
 
 export default {
   name: "App",
-  // components: {
-  //   Navbar,
-  // },
+  data(){
+    return{
+      isPathLogin:false
+    }
+  },
+  watch: {
+    '$route' () {
+      if (this.$route.path === '/login') {
+        this.isPathLogin = true
+      }
+      else {
+        this.isPathLogin = false
+      }  
+    }
+  }
 };
 </script>
 
@@ -24,10 +36,11 @@ export default {
   width: 100%;
 }
 .container {
- 
   max-width: 50% !important;
-  
   background-color: #f8f9fa;
   padding-top: 100px;
 }
+.container-login{
+  background-color: #0277bd;
+} 
 </style>
