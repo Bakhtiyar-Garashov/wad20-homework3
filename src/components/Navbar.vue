@@ -32,7 +32,7 @@
             <b-dropdown-item
               ><router-link to="/browse">Browse</router-link></b-dropdown-item
             >
-            <b-dropdown-item><a href="#">Sign out</a></b-dropdown-item>
+            <b-dropdown-item><router-link to="/login">Sign out</router-link></b-dropdown-item>
           </b-nav-item-dropdown>
         </b-navbar-nav>
       </b-collapse>
