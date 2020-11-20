@@ -15,22 +15,21 @@
       </div>
       <div>
         <h3>Please Log In</h3>
-        <form action="index.html" method="post">
-          <div>
-            <input type="text" name="email" placeholder="Email">
-          </div>
-          <div>
-            <input type="password" name="password" placeholder="Password">
-          </div>
-          <div>
-            <button class="button"><router-link to="/">Log in</router-link></button>
-          </div>
-          <div>
-            <small>
-              <a href="#">Forgot password?</a>
-            </small>
-          </div>
-        </form>
+        <div>
+          <input type="text" name="email" placeholder="Email">
+        </div>
+        <div>
+          <input type="password" name="password" placeholder="Password">
+        </div>
+        <div>
+          <button class="button"><router-link to="/">Log in</router-link></button>
+        </div>
+        <div>
+          <small>
+            <a href="#">Forgot password?</a>
+          </small>
+        </div>
+
       </div>
  </div>
 </template>
