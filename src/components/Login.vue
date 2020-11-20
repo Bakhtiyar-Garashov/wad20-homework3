@@ -15,7 +15,8 @@
       </div>
       <div class="login-form">
         <h3>Please log in</h3>
-        <div>
+       <form action="#">
+          <div>
           <input type="text" name="email" placeholder="Email">
         </div>
         <div>
@@ -29,6 +30,7 @@
             <a href="#">Forgot password?</a>
           </small>
         </div>
+       </form>
 
       </div>
     </div>
@@ -54,15 +56,15 @@ a {
   justify-content: center;
   align-items: center;
  
-  padding-bottom: 125px;
+  padding-bottom: 17.5vh;
 }
 
 .login-container {
-  
+  margin-top: 10vh;
   min-width: 25%;
-  width: 60%;
+  width: 40%;
   padding: 25px 45px 45px 10px;
-  background-color: #ffffff;
+  background-color: #f8f9fa;
   box-shadow: 0 0 15px rgba(38, 50, 56, 0.33);
   text-align: center;
 }

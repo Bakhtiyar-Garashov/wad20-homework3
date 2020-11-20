@@ -1,7 +1,7 @@
 <template>
   <div id="app">
     <router-view name="nav"></router-view>
-    <div :class="{'container-login':isPathLogin}" class="container">
+    <div  :class="loginClass">
       <router-view></router-view>
     </div>
   </div>
@@ -12,19 +12,15 @@
 
 export default {
   name: "App",
-  data(){
-    return{
-      isPathLogin:false
-    }
-  },
-  watch: {
-    '$route' () {
-      if (this.$route.path === '/login') {
-        this.isPathLogin = true
+ 
+  computed:{
+    loginClass(){
+      if (this.$route.path==='/login'){
+        return 'container-login'
       }
-      else {
-        this.isPathLogin = false
-      }  
+      else{
+        return 'container'
+      }
     }
   }
 };
