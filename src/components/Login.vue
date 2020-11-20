@@ -56,11 +56,11 @@ a {
   justify-content: center;
   align-items: center;
  
-  padding-bottom: 17.5vh;
+  
 }
 
 .login-container {
-  margin-top: 10vh;
+  margin-top: 5vh;
   min-width: 25%;
   width: 40%;
   padding: 25px 45px 45px 10px;

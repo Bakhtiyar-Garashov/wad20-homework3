@@ -27,6 +27,11 @@ export default {
 </script>
 
 <style>
+
+html{
+  background-color: #0277bd;
+}
+
 #app {
   background-color: #0277bd;
   width: 100%;
