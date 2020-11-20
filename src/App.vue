@@ -30,6 +30,7 @@ export default {
 #app {
   background-color: #0277bd;
   width: 100%;
+  overflow: hidden;
 }
 .container {
   max-width: 50% !important;
