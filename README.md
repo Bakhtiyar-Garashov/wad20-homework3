@@ -1,4 +1,5 @@
 # postit
+### Project is live on https://admiring-perlman-db3c7c.netlify.app/
 
 ## Project setup
 ```
