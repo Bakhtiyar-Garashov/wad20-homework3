@@ -15,7 +15,7 @@
       </div>
       <div class="login-form">
         <h3>Please log in</h3>
-       <form action="#">
+       <form @submit.prevent>
           <div>
           <input type="text" name="email" placeholder="Email">
         </div>
