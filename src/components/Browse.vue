@@ -7,7 +7,7 @@
         alt="avatar"
       />
       <div>
-        <h5>{{ user.firstname }} {{ user.lastname }}</h5>
+        <h5>{{ user.firstname|capitalize }} {{ user.lastname|capitalize }}</h5>
 
         <button
           @click="user.isFollowed = !user.isFollowed"
@@ -33,6 +33,13 @@ export default {
   },
   mounted() {
     this.$store.dispatch("fetchAllProfiles");
+  },
+  filters: {
+    capitalize: function (value) {
+      if (!value) return "";
+      value = value.toString();
+      return value.charAt(0).toUpperCase() + value.slice(1);
+    },
   },
 };
 </script>
@@ -66,7 +73,7 @@ export default {
   background-color: #82008f;
 }
 
-.button-normal:focus{
+.button-normal:focus {
   outline: none;
 }
 
@@ -80,7 +87,7 @@ export default {
   color: #82008f;
 }
 
-.followed:focus{
+.followed:focus {
   outline: none;
 }
 </style>
