@@ -35,7 +35,7 @@ export default {
     this.$store.dispatch("fetchAllProfiles");
   },
   filters: {
-    capitalize: function (value) {
+    capitalize: function (value) { // capitalize names via vue filter option
       if (!value) return "";
       value = value.toString();
       return value.charAt(0).toUpperCase() + value.slice(1);
