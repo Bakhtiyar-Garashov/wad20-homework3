@@ -48,6 +48,12 @@ export default {
   min-width: 50px;
 }
 
+.profile-container img{
+  object-fit: cover;
+  object-position: top center;
+  margin-top: 3%;
+}
+
 .parent {
   display: flex;
   flex-direction: column;

@@ -133,5 +133,8 @@ export default {
   border-radius: 100%;
   height: 50px;
   width: 50px;
+  object-fit: cover;
+  object-position: top center;
+  margin-top: 3%;
 }
 </style>
