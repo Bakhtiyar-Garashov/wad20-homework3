@@ -1,6 +1,6 @@
 <template>
   <div id="navbar">
-    <b-navbar toggleable="lg" type="dark" variant="light">
+    <b-navbar toggleable="lg" variant="light">
       <b-navbar-brand href="/"
         ><img class="logo" src="../assets/logo.png" alt="logo" srcset=""
       /></b-navbar-brand>
@@ -25,13 +25,10 @@
             <template #button-content>
               <img class="avatar" :src="profile.avatar" alt="" srcset="" />
             </template>
-            <b-dropdown-item
-              >{{ profile.firstname }} {{ profile.lastname }}</b-dropdown-item
-            >
+            <b-dropdown-item>{{ profile.firstname }} {{ profile.lastname }}</b-dropdown-item>
             <b-dropdown-item>{{ profile.email }}</b-dropdown-item>
-            <b-dropdown-item
-              ><router-link to="/browse">Browse</router-link></b-dropdown-item
-            >
+            <b-dropdown-item><router-link to="/browse">Browse</router-link></b-dropdown-item>
+            <b-dropdown-item><router-link to="/">Posts</router-link></b-dropdown-item>
             <b-dropdown-item><router-link to="/login">Sign out</router-link></b-dropdown-item>
           </b-nav-item-dropdown>
         </b-navbar-nav>
@@ -73,4 +70,5 @@ export default {
   object-position: top center;
   margin-top: 3%;
 }
+
 </style>
