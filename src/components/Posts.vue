@@ -75,6 +75,10 @@ export default {
 
 .parent {
   padding: 50px 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 .button-normal {
