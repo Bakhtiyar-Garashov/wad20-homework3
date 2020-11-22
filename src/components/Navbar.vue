@@ -58,6 +58,9 @@ export default {
   width: 100%;
   z-index: 999;
 }
+.mx-auto{
+  width: 50%;
+}
 
 .logo {
   width: 40px;
@@ -70,5 +73,4 @@ export default {
   object-position: top center;
   margin-top: 3%;
 }
-
 </style>
