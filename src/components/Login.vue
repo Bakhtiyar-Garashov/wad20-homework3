@@ -3,7 +3,7 @@
     <div class="login-container"><img class="logo" src="../assets/logo.png" alt="logo" srcset=""
     />
       <div>
-        <h4>Welcome to postIt!</h4>
+        <h4 class ="welcome-message">Welcome to postIt!</h4>
       </div>
       <div>
         <h4>
@@ -67,6 +67,10 @@ a {
   background-color: #f8f9fa;
   box-shadow: 0 0 15px rgba(38, 50, 56, 0.33);
   text-align: center;
+}
+
+.welcome-message{
+  margin-right: 10%;
 }
 
 .login-container img{

@@ -49,9 +49,9 @@ export default {
   border: 1px solid #dedede;
   text-align: center;
   border-radius: 20px;
-  margin: 20px 0;
+  margin: auto;
   padding: 20px 10px;
-  width: 50%;
+  width: 100%;
   min-width: 50px;
 }
 
@@ -62,11 +62,11 @@ export default {
 }
 
 .parent {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  padding: 50px 0;
+  display: grid;
+  grid-template-columns: repeat(2,1fr);
+  gap: 10px;
+  height: 120%;
+  padding-bottom: 100px;
 }
 
 .button-normal {
